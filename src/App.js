@@ -36,6 +36,7 @@ function App() {
   // Dashboard State
   const [alerts, setAlerts] = useState([]);
   const [chartData, setChartData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [systemStatus, setSystemStatus] = useState('Active');
 
   // Profile Modal State
