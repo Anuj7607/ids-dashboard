@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+🛡️ Intelligent Intrusion Detection System (IDS)
+A decoupled, full-stack security application that monitors network traffic in real-time and uses Machine Learning to identify potential threats and anomalies.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+👥 Team & Contributions
+This project was a collaborative effort with a strict separation of concerns between the data engine and the user interface.
 
-## Available Scripts
+Anuj (@Anuj7607): Lead Backend & ML Engineer. Developed the core engine using Python and Scapy for real-time packet sniffing. Implemented the intrusion detection logic and trained Machine Learning model to classify network traffic.
 
-In the project directory, you can run:
+Sneha (@SnehaSaini28): Lead Frontend Engineer. Architected the React-based dashboard and integrated real-time data visualization to monitor and report security alerts. Handled the deployment and hosting on Vercel.
 
-### `npm start`
+🏗️ System Architecture
+The project is built as a decoupled system to ensure scalability and performance:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Packet Sniffing Engine (Python): Uses Scapy to capture live network packets directly from the interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ML Inference Pipeline: Processes raw packet data into features and runs them against trained models to detect intrusions.
 
-### `npm test`
+React Dashboard: A modern UI that consumes security logs and provides a live view of network health.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🚀 Key Features
+Real-time Traffic Analysis: Capturing and logging network packets as they happen.
 
-### `npm run build`
+Automated Threat Detection: Utilizing ML models to distinguish between normal traffic and malicious activity.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Decoupled Deployment: Backend logic is separated from the frontend for optimized performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🛠️ Tech Stack
+Backend: Python, Scapy, Scikit-learn / TensorFlow, Joblib.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend: React.js, Vercel.
 
-### `npm run eject`
+Data: CICIDS Dataset.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Note on Repository Contents:
+Due to GitHub's file size constraints, large serialized .joblib model files and raw .csv datasets are excluded from this repository via .gitignore. The core logic for training and detection is fully documented in the provided Python scripts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
