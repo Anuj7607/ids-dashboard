@@ -168,10 +168,10 @@ function App() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}><Globe size={20} color="#3b82f6" /><h3 style={{ margin: 0, fontSize: '16px' }}>Geospatial Threat Attribution</h3></div>
             <div style={{ height: '350px', borderRadius: '8px', overflow: 'hidden', position: 'relative', zIndex: 1 }}>
               <MapContainer center={[20, 0]} zoom={2} style={{ height: '100%', width: '100%' }}>
-                {/* CartoDB Voyager / English labels */}
+                {/* Standard Free OpenStreetMap Tiles - No API Key, No Watermark */}
                 <TileLayer
-                  url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
                 {alerts.map((a, i) => (a.lat && a.lon) && (<Marker key={i} position={[a.lat, a.lon]} icon={attackIcon}><Popup><div style={{ color: '#333' }}><strong style={{ color: '#ef4444' }}>{a.type} Detected</strong><br/>Source: {a.source}<br/>Location: {a.location || 'Unknown'}</div></Popup></Marker>))}
                 {alerts.length > 0 && alerts[0].lat && <MapRecenter coords={[alerts[0].lat, alerts[0].lon]} />}
